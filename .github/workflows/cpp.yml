@@ -1,0 +1,21 @@
+name: Build HelloWorld C++
+
+on:
+  push:
+    paths:
+      - HelloWorld.cpp
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Build HelloWorld
+      run: g++ -o hello HelloWorld.cpp
+
+    - name: Run HelloWorld
+      run: ./hello
