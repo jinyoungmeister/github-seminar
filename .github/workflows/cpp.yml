@@ -3,8 +3,7 @@ name: Build HelloWorld C++
 on:
   push:
     paths:
-      - '**.cpp'
-      - .github/workflows/helloworld-cpp.yml
+      - HelloWorld.cpp
   pull_request:
 
 jobs:
